@@ -1,3 +1,3 @@
 #/bin/bash
 
-lsb_release e
+lsb_release -i
