@@ -1,2 +1,2 @@
 #!/bin/bash
-ps aux | awk -v user="$1" '$1 == user && $5 > 0 && $6 > 0 {print $0}'
+ps aux | awk -v user="$1" '$1 == user && $5 > 0 && $6 > 0 {print $0}' | grep -v "pattern_to_exclude"
