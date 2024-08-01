@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ufw iptables verbose
+sudo ufw iptables -L verbose
