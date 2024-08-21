@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo nmap -sn -RP 192.168.65.0/24
+sudo nmap $1 -sn -RP 192.168.65.0/24
