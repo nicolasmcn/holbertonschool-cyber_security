@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$1" | sed 's/{xor}//' | base64 --decode | tr '\0-\177' '\102-\177\0-\101'
+echo "$1" | sed 's/{xor}//' | base64 --decode | xxd -p -r | tr '\42-\177\0-\41' '\0-\177'
