@@ -1,22 +1,26 @@
 #!/bin/bash
 
-encoded_hash=$(echo "$1" | sed 's/{xor}//')
+# Get the first argument passed to the script
+password="$1"
 
-decoded_base64=$(echo "$encoded_hash" | base64 --decode)
+# Remove the {xor} prefix from the string
+password="${password#'{xor}'}"
 
-XOR_KEY=0x5A
+# Decode the Base64 encoded string
+decoded_password=$(echo -n "$password" | openssl enc -base64 -d)
 
-decoded=""
+# Initialize the variable to store the XOR operation result
+output=""
 
-for (( i=0; i<${#decoded_base64}; i++ )); do
-    char="${decoded_base64:$i:1}"
-
-    dec=$(printf '%d' "'$char")
-
-    decoded_char=$(printf \\x$(printf %x $((dec ^ XOR_KEY))))
-
-    decoded+="$decoded_char"
+# Loop through each character in the string
+for ((i = 0; i < ${#decoded_password}; i++)); do
+    # Get the character at the current position
+    char="${decoded_password:$i:1}"
+    # Convert the character to its ASCII code and perform XOR operation with 95
+    xor_result=$(( $(printf "%d" "'$char") ^ 95 ))
+    # Add the result to the output variable
+    output+=$(printf "\\$(printf '%03o' $xor_result)")
 done
 
-echo "$decoded"
-
+# Display the result
+echo "$output"
