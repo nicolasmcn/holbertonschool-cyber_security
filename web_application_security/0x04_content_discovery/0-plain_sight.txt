@@ -1,1 +1,1 @@
-/wp-admin/: from robots.txt,wp-sitemap.xml: from sitemap.xml,Wordpress: from favicon
+/wp-admin, /hidden-directory/, wp-login.php, wordpress
