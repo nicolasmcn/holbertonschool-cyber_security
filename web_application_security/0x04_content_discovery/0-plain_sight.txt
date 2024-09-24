@@ -1,1 +1,1 @@
-/wp-admin, /hidden-directory/, wp-login.php, wordpress
+L3dwLWFkbWluLCAvaGlkZGVuLWRpcmVjdG9yeS8sIHdwLWxvZ2luLnBocCwgd29yZHByZXNz
