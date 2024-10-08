@@ -1,1 +1,1 @@
-echo -n "$1" | sha256sum | awk '{print $1}' > 0_hash.txt
+echo -n "$1" | sha256sum | awk '{print $1}' > 1_hash.txt
