@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -v "^#" "/etc/ssh/sshd_config" | grep -v "^$" | xargs
+grep -Ev "^#" "/etc/ssh/sshd_config" | grep -Ev "^$" | xargs
