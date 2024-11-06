@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo nmap -sM -p 21-23,80,443 --open --reason --packet-trace "$1"
+sudo nmap -sM -v -p 21,22,23,80,443 --open --reason --packet-trace "$1"
