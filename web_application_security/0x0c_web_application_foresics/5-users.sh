@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d':' -f1 /etc/passwd | paste -sd',' -
+grep "Accepted password for" auth.log | awk '{print $9}' | sort | uniq | paste -sd',' -
