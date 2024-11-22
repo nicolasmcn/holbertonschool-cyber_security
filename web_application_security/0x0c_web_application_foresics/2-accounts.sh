@@ -1,2 +1,2 @@
 #!/bin/bash
-tail -n 1000 auth.log | awk '/Failed password for/{fail[$NF]++} /Accepted password for/{if(fail[$NF] > 0) print $NF}' | sort | uniq
+tail -n 1000 auth.log | awk '/Failed password for/ && $9 != "invalid" {fail[$9]++} /Accepted password for/ {if(fail[$9] > 0) print $9}' | sort | uniq
