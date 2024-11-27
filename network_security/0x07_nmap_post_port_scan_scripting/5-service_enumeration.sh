@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap -sV -A --script "banner*,ssl-enum-ciphers*,default*,smb-enum-domains*" $1 -oN service_enumeration_results.tx
+nmap -sV -sC -A -O --script "banner*,ssl-enum-ciphers*,default*,smb-enum-domains*" $1 -oN service_enumeration_results.tx
