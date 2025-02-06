@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo iptables -L -n --line-numbers | wc -l
+grep -i 'iptables -A' auth.log | wc -l
