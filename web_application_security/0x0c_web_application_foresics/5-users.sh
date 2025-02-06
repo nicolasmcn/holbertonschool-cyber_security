@@ -1,2 +1,2 @@
 #!/bin/bash
-grep "Accepted password for" auth.log | awk '{print $9}' | sort | uniq | paste -sd',' -
+grep 'new user' auth.log | awk '{print $8}' | awk -F= '{print $2}' | tr -d ',' | sort | paste -sd',' -
