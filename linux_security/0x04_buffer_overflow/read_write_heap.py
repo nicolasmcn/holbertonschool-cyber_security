@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
 """Documentation :
-Module doc
+Module docs.
 """
+
 import sys
 import os
+
 
 def usage():
     """Documentation :
@@ -12,6 +14,7 @@ def usage():
     """
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
+
 
 def main():
     """Documentation :
@@ -53,6 +56,7 @@ def main():
     except Exception as e:
         print(f"Error: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
